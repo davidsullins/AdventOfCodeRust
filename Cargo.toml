@@ -1,0 +1,11 @@
+[package]
+name = "AdventOfCode"
+version = "0.1.0"
+authors = ["David Sullins <david.sullins@gmail.com>"]
+
+[dependencies]
+md5 = "0.1.1"
+bit-vec = "0.4.2"
+scan_fmt = "0.1.1"
+pcre = "0.2.1"
+
