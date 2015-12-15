@@ -28,13 +28,14 @@ fn main() {
     println!("part 2 nice strings: {}", total_nice2);
 }
 
+// part 1
+
 fn is_nice(s: &str) -> bool {
     has_three_vowels(s) && has_double_letter(s) && has_no_forbiddens(s)
 }
 
 fn has_three_vowels(s: &str) -> bool {
-    let v: Vec<&str> = s.matches(|x| x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u').collect();
-    v.len() >= 3
+    s.matches(|x| x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u').count() >= 3
 }
 
 fn has_double_letter(s: &str) -> bool {
@@ -71,7 +72,7 @@ fn test_has_double_letter() {
     assert!(!has_double_letter("absin"));
 }
 
-// part 2
+// part 2: Just use PCRE
 
 fn is_nice2(s: &str) -> bool {
     has_two_pairs(s) && has_xyx(s)
