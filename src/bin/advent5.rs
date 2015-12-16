@@ -41,7 +41,7 @@ fn has_three_vowels(s: &str) -> bool {
 fn has_double_letter(s: &str) -> bool {
     // it's all ASCII input (I checked) and the solution is much more elegant with windows
     // I wish we had a windows iterator for &str
-    s.as_bytes().windows(2).fold(false, |has_double, win| has_double || win[0] == win[1])
+    s.as_bytes().windows(2).any(|win| win[0] == win[1])
 }
 
 fn has_no_forbiddens(s: &str) -> bool {
