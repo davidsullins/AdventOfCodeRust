@@ -1,8 +1,6 @@
 // advent7.rs
 // circuit
 
-#[macro_use] extern crate scan_fmt;
-
 use std::io;
 use std::collections::HashMap;
 
@@ -19,7 +17,6 @@ fn main() {
             }
         }
         circuit.add(&input.trim());
-
     }
 
     let result = circuit.eval("a");
