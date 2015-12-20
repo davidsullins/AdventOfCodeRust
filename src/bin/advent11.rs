@@ -113,11 +113,11 @@ fn test_is_password_secure() {
     assert!(!is_password_secure("abcdeggg"));
 }
 
-//#[test]
-//fn test_find_next_password() {
-//    assert_eq!("abcdffaa", find_next_password("abcdefgh"));
+#[test]
+fn test_find_next_password() {
+    assert_eq!("abcdffaa", find_next_password("abcdefgh"));
 //    assert_eq!("ghjaabcc", find_next_password("ghijklmn"));
-//}
+}
 
 #[test]
 fn test_increment() {
