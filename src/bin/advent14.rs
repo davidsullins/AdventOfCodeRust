@@ -35,7 +35,7 @@ fn main() {
     // part 2
     // unspecified what happens when two reindeer are tied: I'm guessing they both get the point
     let max2 = reindeers.iter()
-        .map(|r| (1..RACE_TIME)
+        .map(|r| (1..RACE_TIME+1)
              .map(|t| if calc_distance(r, t) == calc_max_distance(&reindeers, t) {1} else {0})
              .fold(0, |acc, x| acc + x))
         .max().unwrap();
